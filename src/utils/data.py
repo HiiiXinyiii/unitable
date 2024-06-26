@@ -150,6 +150,10 @@ def cell_str_to_token_list(seq: str) -> List[str]:
 def build_table_from_html_and_cell(
     structure: List[str], content: List[str] = None
 ) -> List[str]:
+    structure = structure.copy()
+    content = content.copy()
+
+
     """Build table from html and cell token list"""
     assert structure is not None
     html_code = list()
